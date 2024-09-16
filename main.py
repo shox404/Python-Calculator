@@ -1,5 +1,6 @@
 import customtkinter as app
 from lib import calculate
+from item import btn
 
 root = app.CTk()
 root.geometry("300x505")
@@ -15,49 +16,10 @@ entry.grid(column=0, row=0, padx=5, pady=5)
 methods = app.CTkFrame(root)
 methods.grid(padx=10, pady=10)
 
-app.CTkButton(
-    methods,
-    text="+",
-    width=60,
-    height=50,
-    fg_color="orange",
-    hover_color="yellow",
-    text_color="black",
-    command=lambda: entry.insert(app.END, "+"),
-).grid(column=0, row=0, padx=5, pady=5)
-
-app.CTkButton(
-    methods,
-    text="-",
-    width=60,
-    height=50,
-    fg_color="orange",
-    hover_color="yellow",
-    text_color="black",
-    command=lambda: entry.insert(app.END, "-"),
-).grid(column=1, row=0, padx=5, pady=5)
-
-app.CTkButton(
-    methods,
-    text="*",
-    width=60,
-    height=50,
-    fg_color="orange",
-    hover_color="yellow",
-    text_color="black",
-    command=lambda: entry.insert(app.END, "*"),
-).grid(column=2, row=0, padx=5, pady=5)
-
-app.CTkButton(
-    methods,
-    text="/",
-    width=60,
-    height=50,
-    fg_color="orange",
-    hover_color="yellow",
-    text_color="black",
-    command=lambda: entry.insert(app.END, "/"),
-).grid(column=3, row=0, padx=5, pady=5)
+btn(app, entry, methods, "+", 0, 0)
+btn(app, entry, methods, "-", 1, 0)
+btn(app, entry, methods, "*", 2, 0)
+btn(app, entry, methods, "/", 3, 0)
 
 body = app.CTkFrame(root)
 body.grid(padx=10, pady=10)
