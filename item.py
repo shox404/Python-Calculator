@@ -1,4 +1,4 @@
-def btn(app, entry, frame, sign, c, r):
+def sign(app, entry, frame, sign, c, r):
     app.CTkButton(
         frame,
         text=sign,

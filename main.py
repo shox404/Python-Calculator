@@ -1,6 +1,6 @@
 import customtkinter as app
 from lib import calculate
-from item import btn
+from item import sign
 
 root = app.CTk()
 root.geometry("300x505")
@@ -16,10 +16,10 @@ entry.grid(column=0, row=0, padx=5, pady=5)
 methods = app.CTkFrame(root)
 methods.grid(padx=10, pady=10)
 
-btn(app, entry, methods, "+", 0, 0)
-btn(app, entry, methods, "-", 1, 0)
-btn(app, entry, methods, "*", 2, 0)
-btn(app, entry, methods, "/", 3, 0)
+sign(app, entry, methods, "+", 0, 0)
+sign(app, entry, methods, "-", 1, 0)
+sign(app, entry, methods, "*", 2, 0)
+sign(app, entry, methods, "/", 3, 0)
 
 body = app.CTkFrame(root)
 body.grid(padx=10, pady=10)
